@@ -8,6 +8,9 @@ import { Actions, ActionConst } from 'react-native-router-flux';
 import Header from '../../components/Header';
 import ListItem from '../../components/ListItem';
 
+import { setIndex } from '../../actions/list';
+import { openDrawer } from '../../actions/drawer';
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -36,10 +39,12 @@ class Home extends Component {
   }
   render() {
     const { people } = this.state;
+    console.log('Props', this.props.openDrawer);
 
     return (
       <Container>
-        <Header title={'List of people'}/>
+        <Header openDrawer={this.props.openDrawer} />
+
         <Content>
           {people.map((person, key) => (
             <ListItem
@@ -48,7 +53,6 @@ class Home extends Component {
             />
           ))}
         </Content>
-
       </Container>
     );
   }
@@ -61,6 +65,8 @@ function bindAction(dispatch) {
   };
 }
 
-const mapStateToProps = state => ({ state });
+const mapStateToProps = state => ({
+  list: state.list.list,
+});
 
 export default connect(mapStateToProps, bindAction)(Home);

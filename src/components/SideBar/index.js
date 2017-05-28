@@ -23,7 +23,7 @@ class SideBar extends Component {
 
   render() {
     return (
-      <Content style={styles.sidebar} >
+      <Content style={styles.sidebar}>
         <ListItem button onPress={() => { Actions.home(); this.props.closeDrawer(); }} >
           <Text>Home</Text>
         </ListItem>
