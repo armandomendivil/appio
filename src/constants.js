@@ -61,16 +61,6 @@ const Constants = {
   Image: {
       Logo: require('./images/logo.png'),
       SplashScreen: require('./images/splash_screen.png'),
-      CategoryPlaceholder: require('./images/category_placehodler.png'),
-      DefaultAvatar: require('./images/default_avatar.jpg'),
-      AvatarBackground: require('./images/avatar_background.jpg'),
-      CheckoutStep1: require('./images/line-1.png'),
-      CheckoutStep2: require('./images/line-2.png'),
-      CheckoutStep3: require('./images/line-3.png'),
-      Stripe: require('./images/stripe.png'),
-      PayPal: require('./images/PayPal.png'),
-      CashOnDelivery: require('./images/cash_on_delivery.png'),
-      PlaceHolder: require('./images/placeholderImage.png'),
   },
   Icon: { //App's icons. Checkout http://fontawesome.io/icons/ for more icons.
       Menu: 'ios-menu',
